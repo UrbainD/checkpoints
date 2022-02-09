@@ -1,0 +1,39 @@
+ALGORITHM checkpointsAlgo
+VAR
+    // Declaration des variables
+    phrase : STRING;
+    nbcaracteres, nbmots, nbvoyelles, i: INTEGER;
+
+BEGIN
+    // Saisie de la phrase par l'utilisateur
+    Write ("Entrez une phrase : ");
+    Read (phrase);
+
+    // La longueur de la phrase
+    nbcaracteres:= phrase.Length;
+
+    // Le nombre de mots dans la phrase
+    nbmots:= 1;
+    FOR i FROM 1 TO phrase.Length STEP 1 DO
+        IF (phrase[i]:= " ")  THEN
+        nbmots:= nbmots + 1;
+        END_IF
+    END_FOR
+    next i;
+    
+    // Le nombre de voyelles dans la phrase
+    nbvoyelles:= 0;
+
+    FOR i FROM 1 TO Length.phrase STEP 1 DO
+        IF (phrase[i]:= "a"  OR phrase[i]:= "e"  OR phrase[i]:= "i" OR phrase[i]:= "o"  OR phrase[i]:= "u"  OR phrase[i]:= "y")  THEN
+         nbvoyelles:= nbvoyelles + 1
+        END_IF
+    END_FOR
+    next i;
+
+    // Affichage des resltats
+    Write "Cette phrase compte", nbcaracteres, " lettres";
+    Write "Cette phrase compte ", nbmots + 1, " mots";
+    Write "Cette phrase compte ", nbvoyelles, " voyelles";
+
+END
