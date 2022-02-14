@@ -1,0 +1,40 @@
+ALGORITHM SommeElementsDistincts
+VAR
+    // Declaration des variables
+    tab1: ARRAY_OF INTEGER [4];
+    tab2: ARRAY_OF INTEGER [3];
+    i,j, somme, count: INTEGER;
+    
+
+BEGIN
+    // Attribution des valeurs aux tableaux
+
+    tab1:={16,10,8,5,2};
+    tab2:={10,3,8,1};
+
+    // initialisation de la somme à 0
+    somme:=0;
+    count:=0;
+
+    /*Prendre les valeurs du tableau 1 une par une les comparer avec les valeurs du tableau 2
+       si distinct on fait la somme*/
+
+    FOR i FROM 0 TO 4 STEP tab1.length-1 DO
+        FOR j FROM 0 TO tab2.length-1 STEP 1 DO
+            IF (tab1[i]:=tab2[j])  THEN
+                count:=count+1;
+            END_IF
+            IF (count<=0)
+                somme:=somme+tab1[i];
+            END_FOR
+                
+        END_FOR
+        j=j+1;
+    END_FOR
+    i=i+1;
+
+
+   // Affichage des resultats
+    Write "La somme des elements distincts est de:", somme;
+
+END

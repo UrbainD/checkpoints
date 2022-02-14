@@ -1,0 +1,44 @@
+ALGORITHM SommeElementsIdentiques
+VAR
+    // Declaration des variables
+    htab1: HASH_TABLE<INTEGER, INTEGER>;
+    htab1: HASH_TABLE<INTEGER, INTEGER>;
+    i,j, somme, count: INTEGER;
+
+BEGIN
+    // Attribution des valeurs aux tableaux
+    htab1.insert(0,4);
+    htab1.insert(1,8);
+    htab1.insert(2,6);
+    htab1.insert(3,10);
+    Write(htab1);
+
+    htab2.insert(0,10);
+    htab2.insert(1,13);
+    htab2.insert(3,2);
+    Write(htab2);
+
+    // initialisation de la somme à 0
+    somme:=0;
+    count:=0;
+    /*Prendre les valeurs du tableau 1 une par une les comparer avec les valeurs du tableau 2
+       si distinct on fait la somme*/
+
+    FOR i FROM 0 TO htab1.length-1 STEP 1 DO
+        FOR j FROM 0 TO htabtab2.length-1 STEP 1 DO
+            IF (htab1.lookup(htab1[i]) := htab2.lookup(htab2[i])) THEN
+                count:=count+1;   
+            END_IF
+            IF(count>=1) THEN
+                somme:=somme+ (htab1[i]*2);
+            END_IF
+        END_FOR
+        j=j+1;
+    END_FOR
+    i=i+1;
+
+
+   // Affichage des resltats
+    Write "La somme des elements Identiques est de:", somme;
+
+END
