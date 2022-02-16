@@ -1,0 +1,42 @@
+ALGORITHM Produit_Scalaire
+
+PROCEDURE dot_product(p FLOAT,R: ARRAY_OF INTEGER [2],I: ARRAY_OF INTEGER [2])
+VAR
+    i:INTEGER;
+BEGIN
+       
+    FOR i FROM 0 TO htab1.length-1 STEP 1 DO
+        p := p + R[i]*I[i];
+    END_FOR
+
+    IF (p:=O)
+        Write("Le produit scalaire est de:"p "et les deux vecteurs sont ORTHOGONAUX");
+    END_FOR
+    ELSE
+        Write("Le produit scalaire est de:"p);
+    END_ELSE
+
+END
+
+VAR
+    // Declaration des variables
+    R: ARRAY_OF INTEGER [2];
+    I: ARRAY_OF INTEGER [2];
+    i: INTEGER;
+    p: FLOAT;
+    
+BEGIN
+
+    // Attribution des valeurs aux tableaux
+
+    R:={1,2,3};
+    I:={4,-6,2};
+
+    // initialisation du produit à 0
+    p :=0 ;
+
+    // Sous algorithme dot_product
+
+    dot_product(p,R,I);
+
+END
