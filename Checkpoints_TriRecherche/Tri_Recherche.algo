@@ -1,0 +1,30 @@
+ALGORITHM Tri_par_insersion
+
+PROCEDURE Insert_sort(arr: ARRAY_OF INTEGER [10])
+VAR
+    // Declaration des variables
+    i,j,min:INTEGER;
+BEGIN
+    // Initiallisation de la valeur de i à 1
+    i:=1;
+
+    /*La nous allons faire le teste on parcours le tableau on prend la premiere valeur
+    on la teste avec les autres valeurs du tableau, si ce dernier est inférieur on la place 
+    comme valeur min et ainsi de suite jusqu'à l'obtention de notre tableau trié*/
+    
+    WHILE (i<=arr.length) DO
+        j:=i+1;
+        min:=i;
+        WHILE (j<=arr.length) DO
+            IF (arr[j]<arr[min]) THEN
+                min:=j;
+            END_IF
+            j:=j+1;
+        END_WHILE
+        IF (min<>i) THEN
+        arr[i]:=[min];
+        END_IF
+        i:=i+1;
+    END_WHILE
+END
+
